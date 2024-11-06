@@ -143,7 +143,7 @@ install(FILES ${LIVOX_API_HEADER}
 )
 
 # Export include directories and libraries for ament
-ament_export_include_directories(${LIVOX_PUBLIC_INCLUDE_DIR})
+ament_export_include_directories(include/${PROJECT_NAME})
 ament_export_libraries(${SDK_LIBRARY_STATIC} ${SDK_LIBRARY_SHARED})
 
 # Required for ROS 2 packages
