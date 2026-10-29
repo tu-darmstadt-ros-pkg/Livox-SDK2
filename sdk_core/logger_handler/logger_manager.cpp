@@ -151,7 +151,7 @@ livox_status LoggerManager::StartLogger(const uint32_t handle, const LivoxLidarL
     return kLivoxLidarStatusSuccess;  
   }
 
-  LOG_INFO("Start Logger handler: {}, log_type: {}", handle, log_type);
+  LOG_INFO("Start Logger handler: {}, log_type: {}", handle, (int)log_type);
 
   EnableDeviceLoggerRequest enable_req = {};
   enable_req.log_type = static_cast<uint8_t>(log_type);
@@ -297,7 +297,7 @@ void LoggerManager::StopAllLogger() {
 livox_status LoggerManager::StopLogger(const uint32_t handle, const LivoxLidarLogType log_type,
     LivoxLidarLoggerCallback cb, void* client_data) {
 
-  LOG_INFO("Stop Logger handler: {}, log_type: {}", handle, log_type);
+  LOG_INFO("Stop Logger handler: {}, log_type: {}", handle, (int)log_type);
 
   EnableDeviceLoggerRequest enable_req = {};
   enable_req.log_type = log_type;
